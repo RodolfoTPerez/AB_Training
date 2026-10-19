@@ -1040,8 +1040,9 @@
     </div>
 
     <!-- Modal Video -->
-    <div id="modal-video" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md">
-        <div class="glass-card w-full max-w-4xl rounded-2xl p-5 border border-white/20 shadow-2xl relative">
+    <div id="modal-video" class="fixed inset-0 z-50 hidden flex items-center justify-center p-2 sm:p-4 bg-slate-950/90 backdrop-blur-md">
+        <!-- Lo más ancho posible sin pasarse del alto de la pantalla (video 16:9 + título + pie) -->
+        <div class="glass-card rounded-2xl p-4 sm:p-5 border border-white/20 shadow-2xl relative" style="width: min(96vw, max(320px, calc((100vh - 200px) * 16 / 9)));">
             <button onclick="closeVideoModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white z-10"><i class="fa-solid fa-xmark text-lg"></i></button>
             <h3 id="video-modal-title" class="font-bold text-slate-100 mb-1 text-sm">Video</h3>
             <p id="video-modal-sop" class="text-[11px] text-brand-300 mb-3">Course</p>
